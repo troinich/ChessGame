@@ -1,15 +1,13 @@
 <html>
 
 <script>
- 
+
     let verticals = [1, 2, 3, 4, 5, 6, 7, 8];
     let horizontals = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
-    var position;
-
     function isValidRange(a) {
         return (a >= 0) && (a <= 7)
-    };
+    }
 
 
     function isValidCoordinate(x, y) {
@@ -29,12 +27,12 @@
         }
 
 
-        var allPositions = [];
+        let allPositions = [];
 
         for (const dx of twos) {
             for (const dy of ones) {
-                var x = x0 + dx;
-                var y = y0 + dy;
+                let x = x0 + dx;
+                let y = y0 + dy;
 
                 if (isValidCoordinate(x, y)) {
                     allPositions.push([horizontals[x], verticals[y]]);
@@ -44,8 +42,8 @@
 
         for (const dy of twos) {
             for (const dx of ones) {
-                var x = x0 + dx;
-                var y = y0 + dy;
+                let x = x0 + dx;
+                let y = y0 + dy;
 
                 if (isValidCoordinate(x, y)) {
                     allPositions.push([horizontals[x], verticals[y]]);
